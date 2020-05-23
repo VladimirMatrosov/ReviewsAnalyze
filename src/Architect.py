@@ -1,7 +1,7 @@
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Embedding, Conv1D, Dropout, LSTM, Flatten, MaxPooling1D
 from kerastuner.tuners import Hyperband
-from ImdbHelper import ImdbHelper
+from src.ImdbHelper import ImdbHelper
 
 imdb = ImdbHelper()
 x_train = imdb.x_train

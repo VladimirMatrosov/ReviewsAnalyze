@@ -1,5 +1,5 @@
-from DatasetHelper import DatasetHelper
-from ReviewsNeuronet import show_train_process, Neuronet
+from src.DatasetHelper import DatasetHelper
+from src.ReviewsNeuronet import show_train_process, Neuronet
 import numpy as np
 
 dataset = DatasetHelper('D:/yelp_review_polarity_csv/')
