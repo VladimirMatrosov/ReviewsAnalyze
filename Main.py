@@ -9,11 +9,11 @@ x_test = dataset.x_test
 y_test = dataset.y_test
 
 neuronet = Neuronet(dataset.count_words, dataset.max_len)
-# history = neuronet.train(x_train, y_train, 'reviews_analyzer.h5')
-# show_train_process(history)
+history = neuronet.train(x_train, y_train, 'reviews_analyzer.h5')
+show_train_process(history)
 neuronet.load('reviews_analyzer.h5')
-# scores = neuronet.evaluate(x_test, y_test)
-# print("Доля верных ответов на тестовой выборке: ", round(scores[1] * 100, 4))
+scores = neuronet.evaluate(x_test, y_test)
+print("Доля верных ответов на тестовой выборке: ", round(scores[1] * 100, 4))
 
 positive_review = "Really cool app for spending free time with friends"
 negative_review = "It's bad for your password, you forget it and you can't use a normal one you use"
